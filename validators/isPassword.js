@@ -1,4 +1,6 @@
 export function isPassword(password) {
-  const regex = /^[a-zA-Z0-9]{8,}$/;
+
+  const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
   return regex.test(password);
+
 }
